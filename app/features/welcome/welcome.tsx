@@ -1,7 +1,10 @@
 import logoDark from "./reppi_logo_dark.svg";
-import logoLight from "./logo-light.svg";
+import logoLight from "./reppi_logo_light.svg";
+import { useNavigate } from 'react-router';
 
 export function Welcome() {
+  const navigate = useNavigate();
+
   return (
     <main className="flex items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900">
       <div className="flex flex-col items-center gap-10 p-8 w-full max-w-md">
@@ -20,7 +23,12 @@ export function Welcome() {
         </div>
 
         {/* ログインフォーム */}
-        <form className="w-full space-y-6">
+        <form className="w-full space-y-6"
+          onSubmit={(e) => {
+            e.preventDefault();
+            navigate('/lizards');
+          }}
+        >
           <div>
             <label htmlFor="email" className="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-200">
               メールアドレス
