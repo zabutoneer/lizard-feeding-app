@@ -41,6 +41,7 @@
 
 ## 🗂 ディレクトリ構成
 
+```
 lizard-feeding-app/
 ├── public/
 ├── app/
@@ -51,6 +52,7 @@ lizard-feeding-app/
 │   └── ...
 ├── package.json
 └── README.md
+```
 
 ## 🌿 ブランチ運用ルール
 本プロジェクトでは、以下のブランチで運用しています。
