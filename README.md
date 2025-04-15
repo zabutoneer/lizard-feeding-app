@@ -1,87 +1,76 @@
-# Welcome to React Router!
+# 🦎 Lizard Feeding App
 
-A modern, production-ready template for building full-stack React applications using React Router.
+トカゲの餌やり管理を行うアプリケーションです。
+飼育記録を簡単に管理し、健康的な飼育をサポートします。
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 📌 概要
 
-## Features
+このアプリケーションは、トカゲの餌やりスケジュールや履歴を管理するためのツールです。
+飼育者が個々のトカゲに合わせた給餌計画を立て、記録を残すことができます。
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+## 🚀 使用技術
 
-## Getting Started
+- フロントエンド: React, React Router v7
+- バックエンド: Node.js, Express
+- インフラ: Docker
 
-### Installation
+## 🧰 主な機能
 
-Install the dependencies:
+- 飼育しているトカゲの登録、編集、削除
+- 餌やりの記録と履歴表示
+- 餌やりスケジュールの管理
+- 飼育情報の可視化
 
-```bash
-npm install
-```
+## 🛠 インストール方法
 
-### Development
+1. リポジトリをクローンします。
 
-Start the development server with HMR:
+   ```bash
+    git clone https://github.com/zabutoneer/lizard-feeding-app.git
+    cd lizard-feeding-app
 
-```bash
-npm run dev
-```
+2. 依存関係をインストールします。
 
-Your application will be available at `http://localhost:5173`.
+   ```bash
+    npm install
 
-## Building for Production
+3. アプリケーションを起動します。
 
-Create a production build:
+   ```bash
+    npm start
 
-```bash
-npm run build
-```
-
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
-
-```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
-```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
+## 🗂 ディレクトリ構成
 
 ```
+lizard-feeding-app/
+├── public/
+├── app/
+│   ├── components/
+│   ├── features/
+│   ├── routes/
+│   ├── store/
+│   └── ...
 ├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
+└── README.md
 ```
 
-## Styling
+## 🌿 ブランチ運用ルール
+本プロジェクトでは、以下のブランチで運用しています。
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+- `main`: 本番環境にデプロイされる安定版ブランチ。
+- `develop`: 日々の開発作業を統合するブランチ。
+- 作業ブランチ: `develop` から以下のようなブランチを切って作業を行います。
+  - `feature/機能名`: 新機能の開発
+  - `fix/バグ名`: バグ修正
+  - `doc/変更内容`: ドキュメントの更新
+  - `refactor/変更内容`: リファクタリング
 
----
+## 📄 ライセンス
 
-Built with ❤️ using React Router.
+このプロジェクトは MIT License の下でライセンスされています。
+
+## 👤 作者
+
+- 名前: zabutoneer
+- GitHub: @zabutoneer
+
