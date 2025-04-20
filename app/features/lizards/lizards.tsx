@@ -27,7 +27,7 @@ const mockLizards = [
   },
   {
     id: 3,
-    name: 'たんたん',
+    name: 'のん',
     type: 'アオジタトカゲ',
     nextFeeding: '2025-04-18',
     image: '/mock_images/aojita.png',
