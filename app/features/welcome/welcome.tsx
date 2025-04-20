@@ -1,5 +1,5 @@
-import logoDark from "./reppi_logo_dark.svg";
-import logoLight from "./reppi_logo_light.svg";
+import logoDark from './reppi_logo_dark.svg';
+import logoLight from './reppi_logo_light.svg';
 import { useNavigate } from 'react-router';
 
 export function Welcome() {
@@ -10,27 +10,23 @@ export function Welcome() {
       <div className="flex flex-col items-center gap-10 p-8 w-full max-w-md">
         {/* ロゴ表示 */}
         <div className="w-[400px] max-w-full">
-          <img
-            src={logoLight}
-            alt="Lizard Feeding App"
-            className="block w-full dark:hidden"
-          />
-          <img
-            src={logoDark}
-            alt="Lizard Feeding App"
-            className="hidden w-full dark:block"
-          />
+          <img src={logoLight} alt="Lizard Feeding App" className="block w-full dark:hidden" />
+          <img src={logoDark} alt="Lizard Feeding App" className="hidden w-full dark:block" />
         </div>
 
         {/* ログインフォーム */}
-        <form className="w-full space-y-6"
+        <form
+          className="w-full space-y-6"
           onSubmit={(e) => {
             e.preventDefault();
             navigate('/lizards');
           }}
         >
           <div>
-            <label htmlFor="email" className="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-200">
+            <label
+              htmlFor="email"
+              className="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-200"
+            >
               メールアドレス
             </label>
             <input
@@ -42,7 +38,10 @@ export function Welcome() {
           </div>
 
           <div>
-            <label htmlFor="password" className="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-200">
+            <label
+              htmlFor="password"
+              className="block mb-1 text-sm font-medium text-gray-700 dark:text-gray-200"
+            >
               パスワード
             </label>
             <input
@@ -63,7 +62,7 @@ export function Welcome() {
 
         {/* 新規登録リンク */}
         <div className="text-sm text-gray-600 dark:text-gray-300">
-          アカウントをお持ちでない方は{" "}
+          アカウントをお持ちでない方は{' '}
           <a href="/signup" className="text-blue-600 hover:underline">
             新規登録
           </a>
