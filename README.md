@@ -29,15 +29,20 @@
     git clone https://github.com/zabutoneer/lizard-feeding-app.git
     cd lizard-feeding-app
 
+   ```
+
 2. 依存関係をインストールします。
 
    ```bash
     npm install
 
+   ```
+
 3. アプリケーションを起動します。
 
    ```bash
     npm start
+   ```
 
 ## 🗂 ディレクトリ構成
 
@@ -55,6 +60,7 @@ lizard-feeding-app/
 ```
 
 ## 🌿 ブランチ運用ルール
+
 本プロジェクトでは、以下のブランチで運用しています。
 
 - `main`: 本番環境にデプロイされる安定版ブランチ。
@@ -73,4 +79,3 @@ lizard-feeding-app/
 
 - 名前: zabutoneer
 - GitHub: @zabutoneer
-

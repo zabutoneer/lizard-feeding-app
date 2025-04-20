@@ -1,26 +1,36 @@
-import { Box, Button, Heading, Image, SimpleGrid, Text, VStack, ChakraProvider, defaultSystem } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Heading,
+  Image,
+  SimpleGrid,
+  Text,
+  VStack,
+  ChakraProvider,
+  defaultSystem,
+} from '@chakra-ui/react';
 
 const mockLizards = [
   {
     id: 1,
-    name: "レオン",
-    type: "ヒョウモントカゲモドキ",
-    nextFeeding: "2025-04-16",
-    image: "/mock_images/reo.png",
+    name: 'レオン',
+    type: 'ヒョウモントカゲモドキ',
+    nextFeeding: '2025-04-16',
+    image: '/mock_images/reo.png',
   },
   {
     id: 2,
-    name: "エニー",
-    type: "ヒョウモントカゲモドキ",
-    nextFeeding: "2025-04-17",
-    image: "/mock_images/eniguma.png",
+    name: 'エニー',
+    type: 'ヒョウモントカゲモドキ',
+    nextFeeding: '2025-04-17',
+    image: '/mock_images/eniguma.png',
   },
   {
     id: 3,
-    name: "たんたん",
-    type: "アオジタトカゲ",
-    nextFeeding: "2025-04-18",
-    image: "/mock_images/aojita.png",
+    name: 'たんたん',
+    type: 'アオジタトカゲ',
+    nextFeeding: '2025-04-18',
+    image: '/mock_images/aojita.png',
   },
 ];
 
@@ -32,14 +42,14 @@ export function Lizards() {
         <SimpleGrid columns={[1, null, 2]}>
           {mockLizards.map((lizard) => (
             <Box
-               key={lizard.id}
-               borderWidth="1px"
-               borderRadius="lg"
-               overflow="hidden"
-               p={4}
-               bg="white"
-               shadow="md"
-               _dark={{ bg: "gray.700" }}
+              key={lizard.id}
+              borderWidth="1px"
+              borderRadius="lg"
+              overflow="hidden"
+              p={4}
+              bg="white"
+              shadow="md"
+              _dark={{ bg: 'gray.700' }}
             >
               <VStack>
                 <Image
@@ -56,7 +66,7 @@ export function Lizards() {
                 <Button colorScheme="teal">餌をあげる</Button>
               </VStack>
             </Box>
-           ))}
+          ))}
         </SimpleGrid>
       </Box>
     </ChakraProvider>
