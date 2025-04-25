@@ -9,6 +9,8 @@ import {
   ChakraProvider,
   defaultSystem,
 } from '@chakra-ui/react';
+import { useState } from 'react';
+import { FeedingModal } from '../feeding/FeedingModal';
 
 const mockLizards = [
   {
@@ -35,6 +37,8 @@ const mockLizards = [
 ];
 
 export function Lizards() {
+  const [selectedLizard, setSelectedLizard] = useState<number | null>(null);
+
   return (
     <ChakraProvider value={defaultSystem}>
       <Box p={6}>
@@ -63,7 +67,12 @@ export function Lizards() {
                   {lizard.name}
                 </Text>
                 <Text color="gray.500">次回餌やり予定: {lizard.nextFeeding}</Text>
-                <Button colorScheme="teal">餌をあげる</Button>
+                <Button onClick={() => setSelectedLizard(lizard.id)}>餌をあげる</Button>
+                <FeedingModal
+                  isOpen={selectedLizard !== null}
+                  onClose={() => setSelectedLizard(null)}
+                  lizardName={mockLizards.find((l) => l.id === selectedLizard)?.name || ''}
+                />
               </VStack>
             </Box>
           ))}
